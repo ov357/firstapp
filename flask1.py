@@ -47,6 +47,7 @@ def m4(c=[0,1,2,3,4,5,6,7,8,9]):
     if query:
         c = query.split(',')
         c = [0]+c
+    c = [int(x) for x in c]
     #print('c=',type(c))
     # multis en 4 favos - c contient la liste type
     cbs = [
@@ -87,7 +88,7 @@ def m4(c=[0,1,2,3,4,5,6,7,8,9]):
                 c1.append(c[j])
             #print()
             combs.append(c1)
-    print(combs)
+    #print(combs)
     return render_template("m4.html", combs = combs)
 
 
